@@ -1,0 +1,25 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.meta-col {
+    display: inline-block;
+    float: left;
+}
+.meta-row::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.meta-col-50 {
+    width: 50%;
+}
+#ecen-actions-emails {
+    padding-top: 15px;
+}
+#ecen-actions-emails label {
+    display: block;
+}
+#ecen-actions-emails select {
+    width: calc( 100% - 5px );
+}

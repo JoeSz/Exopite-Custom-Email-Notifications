@@ -25,6 +25,8 @@ class Exopite_Custom_Email_Notifications_Meta_Boxes {
     /* Create a meta box for our custom fields */
     public function render_meta_options() {
 
+        if( ! current_user_can( 'administrator' ) && ! current_user_can( 'editor' ) ) return;
+
         // https://developer.wordpress.org/reference/functions/add_meta_box/
         add_meta_box("exopite-custom-email-notifications-meta-box", __( 'Send E-Mails', 'exopite-custom-email-notifications' ), array($this, "display_meta_options"), get_post_types(), "side", "low");
     }
@@ -120,6 +122,9 @@ class Exopite_Custom_Email_Notifications_Meta_Boxes {
 
     // Save custom fields
     public function save_meta_options() {
+
+        if( ! current_user_can( 'administrator' ) && ! current_user_can( 'editor' ) ) return;
+
         global $post;
 
         update_post_meta($post->ID, "ecen-activate", sanitize_text_field( $_POST["ecen-activate"]) );

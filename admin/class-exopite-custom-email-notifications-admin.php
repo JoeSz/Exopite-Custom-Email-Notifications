@@ -124,8 +124,6 @@ class Exopite_Custom_Email_Notifications_Admin {
      */
     public function save_post_or_page( $post_id, $post, $update ) {
 
-        file_put_contents( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR . '/where.txt', var_export( 'start', true ) );
-
         // If this is just a revision, don't send the email.
         if ( wp_is_post_revision( $post_id ) ) return;
 
@@ -188,12 +186,6 @@ class Exopite_Custom_Email_Notifications_Admin {
             Exopite_Template::$variables_array['content'] = apply_filters( 'the_content', $post->post_content );
             Exopite_Template::$filename = $this->get_template_name( $files );
 
-            // $email_body = apply_filters( 'exopite-custom-email-notifications-post-page-before-body', '' );
-            // $email_body .= Exopite_Template::get_template();
-            // $email_body .= apply_filters( 'exopite-custom-email-notifications-post-page-after-body', '' );
-
-            // wp_mail( $seleted_users, $subject, $email_body, $headers );
-
             $this->send_wp_email( $seleted_users, $subject );
 
         } else {
@@ -248,13 +240,9 @@ class Exopite_Custom_Email_Notifications_Admin {
         $path = join( DIRECTORY_SEPARATOR, array( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR, 'templates' ) );
 
         foreach ( $files as $file ) {
-
             if ( file_exists( $path . DIRECTORY_SEPARATOR . $file ) ) {
-
                 return $path . DIRECTORY_SEPARATOR . $file;
-
             }
-
         }
 
         return null;
@@ -270,7 +258,6 @@ class Exopite_Custom_Email_Notifications_Admin {
      * @return void
      */
     public function send_notification_comment( $id, $new_status, $old_status = null ) {
-        //file_put_contents( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR . '/comment.txt', var_export( 'commented', true ) );
 
         $has_approved = $this->has_approved( $new_status, $old_status );
         $allowed_statuses = apply_filters( 'notify_users_email_allowed_comment_statuses', $has_approved, $new_status, $old_status );
@@ -308,25 +295,12 @@ class Exopite_Custom_Email_Notifications_Admin {
                 // Get user name if not empty, if empty get username
                 $display_name = ( strlen( $user->display_name ) > 0 ) ? $user->display_name : $user->user_login;
 
-                //file_put_contents( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR . '/all_users.txt', var_export( get_users(), true ) );
-                //file_put_contents( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR . '/sel_users.txt', var_export( $user, true ) );
-
                 // Get template
                 Exopite_Template::$variables_array['title'] = $title;
                 Exopite_Template::$variables_array['url'] = get_permalink( $comment->comment_post_ID ) . '#comment-' . $comment->comment_ID;
                 Exopite_Template::$variables_array['comment_content'] = $comment->comment_content;
                 Exopite_Template::$variables_array['user_name'] = $display_name;
                 Exopite_Template::$filename = $this->get_template_name( $files );
-
-                // $headers = array('Content-Type: text/html; charset=UTF-8');
-
-                // $email_body = apply_filters( 'exopite-custom-email-notifications-comments-before-body', '' );
-                // $email_body .= Exopite_Template::get_template();
-                // $email_body .= apply_filters( 'exopite-custom-email-notifications-comments-after-body', '' );
-
-                //file_put_contents( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR . '/po.txt', var_export( $post_type_obj, true ) );
-                //file_put_contents( EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR . '/comment-email.txt', var_export( $email_body, true ) );
-                // wp_mail( $seleted_users, $subject, $email_body, $headers );
 
                 $this->send_wp_email( $seleted_users, $subject );
 
@@ -340,10 +314,6 @@ class Exopite_Custom_Email_Notifications_Admin {
         }
 
     }
-
-
-
-
 
 
 }

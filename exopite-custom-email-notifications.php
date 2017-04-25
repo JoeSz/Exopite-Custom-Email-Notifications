@@ -32,19 +32,6 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'EXOPITE_CUSTOM_EMAIL_NOTIFICATIONS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-/*
- * ToDo:
- * - metabox with email selection (checkbox or multiselect)
- * - send email (post/page): new post, update post, new comment (checkbox or multiselect)
- *   - comments:
- *     https://wordpress.stackexchange.com/questions/36033/if-new-comment-posted-in-custom-post-send-notification-to-custom-email-from-cu
- * - send email on admin/not admin login -> settings
- * - settings (codestar):
- *   - email template editor
- *   - admin/not admin login/wrong login?
- * - email template from template (editor with [#variable] fields)
- */
-
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-exopite-custom-email-notifications-activator.php
@@ -63,8 +50,9 @@ function deactivate_exopite_custom_email_notifications() {
 	Exopite_Custom_Email_Notifications_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_exopite_custom_email_notifications' );
-register_deactivation_hook( __FILE__, 'deactivate_exopite_custom_email_notifications' );
+// Temporary disable unused activator and deactivator functions
+// register_activation_hook( __FILE__, 'activate_exopite_custom_email_notifications' );
+// register_deactivation_hook( __FILE__, 'deactivate_exopite_custom_email_notifications' );
 
 /**
  * Initialize custom templater

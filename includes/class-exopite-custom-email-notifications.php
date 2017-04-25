@@ -74,7 +74,9 @@ class Exopite_Custom_Email_Notifications {
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
-		$this->define_public_hooks();
+
+        // Temporary disable unused plublic functions
+        //$this->define_public_hooks();
 
 	}
 
@@ -174,7 +176,7 @@ class Exopite_Custom_Email_Notifications {
          * @link https://codex.wordpress.org/Plugin_API/Action_Reference/save_post
          * @link https://wordpress.stackexchange.com/questions/134664/what-is-correct-way-to-hook-when-update-post/134667#134667
          */
-		$this->loader->add_action( 'save_post', $plugin_admin, 'save_post_or_page', 10, 3 );
+		$this->loader->add_action( 'save_post', $plugin_admin, 'send_notification_post_or_page', 10, 3 );
 
         /*
          * Nofity users when approve a comment.

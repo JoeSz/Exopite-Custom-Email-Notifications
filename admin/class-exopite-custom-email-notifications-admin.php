@@ -122,7 +122,7 @@ class Exopite_Custom_Email_Notifications_Admin {
      *
      * @return void
      */
-    public function save_post_or_page( $post_id, $post, $update ) {
+    public function send_notification_post_or_page( $post_id, $post, $update ) {
 
         // If this is just a revision, don't send the email.
         if ( wp_is_post_revision( $post_id ) ) return;

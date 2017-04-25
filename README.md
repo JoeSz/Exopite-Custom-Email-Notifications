@@ -20,6 +20,8 @@ Please see screenshot. `/assets/screenshot-1.jpg`
 
 English, Deutsch
 
+![Exopite Custom Email Notifications MetaBox](/assets/screenshot-1.jpg?raw=true)
+
 USAGE
 -----
 

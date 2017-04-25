@@ -16,8 +16,6 @@ You can send an email notifications on add, update or comment a post, page or cu
 
 It will show a beta box on pages, posts or custom post types, where you can select multiple action to multiple emails.
 
-Please see screenshot. `/assets/screenshot-1.jpg`
-
 English, Deutsch
 
 ![Exopite Custom Email Notifications MetaBox](/assets/screenshot-1.jpg?raw=true)
@@ -32,14 +30,13 @@ No additional settings required.
 INSTALLATION
 ------------
 
-1. Upload `exopite-multifilter.php` to the `/wp-content/plugins/` directory
+1. [x] Upload `exopite-custom-email-notifications` to the `/wp-content/plugins/exopite-custom-email-notifications/` directory
 
 OR
 
-1. Install plugin from WordPress repository (not yet)
+1. [ ] Install plugin from WordPress repository (not yet)
 
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place [exopite-multifilter] shortcode to your content
+2. [x] Activate the plugin through the 'Plugins' menu in WordPress
 
 PLANNED
 -------

@@ -1,13 +1,13 @@
 # Exopite Custom Email Notifications
 ## WordPress Plugin
 
-Author link: http://joe.szalai.org
-Tags: email notifications, page, post, custom post type, comment
-Requires at least: 3.0.1
-Tested up to: 4.7.4
-Stable tag: 4.7.4
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Author link: http://joe.szalai.org <br />
+Tags: email notifications, page, post, custom post type, comment <br />
+Requires at least: 3.0.1 <br />
+Tested up to: 4.7.4 <br />
+Stable tag: 4.7.4 <br />
+License: GPLv3 or later <br />
+License URI: http://www.gnu.org/licenses/gpl-3.0.html <br />
 
 DESCRIPTION
 -----------
@@ -34,7 +34,7 @@ INSTALLATION
 
 OR
 
-1. [ ] Install plugin from WordPress repository (not yet)
+1. [ ] ~~Install plugin from WordPress repository (not yet)~~
 
 2. [x] Activate the plugin through the 'Plugins' menu in WordPress
 
@@ -52,10 +52,11 @@ CHANGELOG
 
 LICENSE DETAILS
 ---------------
+
 The GPL license of Exopite Multifilter grants you the right to use, study, share (copy), modify and (re)distribute the software, as long as these license terms are retained.
 
 DISCLAMER
 ---------
 
-NO WARRANTY OF ANY KIND! USE THIS SOFTWARES AND INFORMATIONS AT YOUR OWN RISK! READ DISCLAMER.TXT!
+NO WARRANTY OF ANY KIND! USE THIS SOFTWARES AND INFORMATIONS AT YOUR OWN RISK! READ DISCLAMER.TXT! <br />
 License: GNU General Public License v3

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 17:18+0200\n"
-"PO-Revision-Date: 2017-04-24 17:20+0200\n"
+"PO-Revision-Date: 2017-04-27 07:43+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,11 +43,11 @@ msgstr "E-Mail-Benachrichtigungen aktivieren"
 
 #: includes/class-exopite-custom-email-notifications-meta-boxes.php:52
 msgid "when:"
-msgstr "wann:"
+msgstr "was:"
 
 #: includes/class-exopite-custom-email-notifications-meta-boxes.php:58
 msgid "Added"
-msgstr "Hinzugefügt"
+msgstr "Veröffentlichen"
 
 #: includes/class-exopite-custom-email-notifications-meta-boxes.php:59
 msgid "Updated"
